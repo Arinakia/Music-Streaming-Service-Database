@@ -31,13 +31,3 @@ The database consists of 13 interconnected tables:
 3.  **Load Sample Data**:
     Run the `add_samples.sql` script to populate the database with artists like Eminem, Drake, Halsey, and Linkin Park, along with their songs and albums.
 
-## Sample Queries
-Once populated, you can run queries like:
-
-**Find all songs by a specific artist (e.g., Eminem):**
-```sql
-SELECT s.name 
-FROM Song s
-JOIN Song_artist sa ON s.song_id = sa.song_id
-JOIN Artist a ON sa.artist_id = a.artist_id
-WHERE a.name = 'Eminem';
